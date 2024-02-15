@@ -1,5 +1,7 @@
 # Notion Exporter 🛫
 
+:warning: **This is a fork maintained by One Beyond.**. The fork started with the commit [`712b4a9`](https://github.com/yannbolliger/notion-exporter/commit/712b4a92882dcaef44e5625e258da4010a027155) from the original repository. The original repository is located at [yannbolliger/notion-exporter](https://github.com/yannbolliger/notion-exporter)
+
 A simple CLI tool and TypeScript library for exporting Markdown and CSV files
 from any [Notion.so](https://notion.so) page. The tool relies on the export
 feature of Notion's web-app, hence you get exactly the Markdown and CSV you'd
@@ -12,7 +14,7 @@ pipeline. For example, you can use Notion as a CMS to write your blog, export
 the Markdown in a Github action and build a static Hugo page. 🎉
 
 ```bash
-npm install -g notion-exporter
+npm install -g @onebeyond/notion-exporter
 notion-exporter 3af0a1e347dd40c5ba0a2c91e234b2a5 -t csv > list.csv
 ```
 
@@ -26,7 +28,7 @@ your CSV, inject the Markdown in any React/Next.js/Vue page or interact with the
 underlying [`AdmZip`](https://github.com/cthackers/adm-zip) object.
 
 ```ts
-import NotionExporter from "notion-exporter"
+import NotionExporter from "@onebeyond/notion-exporter"
 
 const tokenV2 = ...
 const fileToken = ...
@@ -132,3 +134,4 @@ use-case? Please submit issues and PRs on Github.
 ### Contributors
 
 - Yann Bolliger, [@yannbolliger](https://github.com/yannbolliger).
+- Guillermo C. Martínez, [@telekosmos](https://github.com/telekosmos)
