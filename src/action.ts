@@ -25,7 +25,12 @@ const askToken = (tokenName: string): Promise<string> => {
 const envOrAskToken = async (tokenName: string) =>
   process.env[tokenName] || (await askToken(tokenName))
 
-const action = async (blockId: string, fileType: string, noFiles: boolean, recursive: boolean = false) => {
+const action = async (
+  blockId: string,
+  fileType: string,
+  noFiles: boolean,
+  recursive: boolean = false
+) => {
   if (!isFileType(fileType)) {
     console.log(`File type (-t, --type) has to be one of: ${FileType}`)
     process.exit(1)

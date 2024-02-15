@@ -23,7 +23,12 @@ export class NotionExporter {
    * @param tokenV2 – the Notion `token_v2` Cookie value
    * @param fileToken – the Notion `file_token` Cookie value
    */
-  constructor(tokenV2: string, fileToken: string, noFiles: boolean, recursive: boolean = false) {
+  constructor(
+    tokenV2: string,
+    fileToken: string,
+    noFiles: boolean,
+    recursive: boolean = false
+  ) {
     this.client = axios.create({
       baseURL: "https://www.notion.so/api/v3/",
       headers: {
@@ -44,13 +49,16 @@ export class NotionExporter {
     const id = validateUuid(blockIdFromUrl(idOrUrl))
     if (!id) return Promise.reject(`Invalid URL or blockId: ${idOrUrl}`)
 
-    const exportOptions = Object.assign({
-      exportType: "markdown",
-      timeZone: "Europe/Zurich",
-      locale: "en",
-      collectionViewExportType: "currentView",
-    }, this.noFilesIncluded ? { includeContents: "no_files" }: {});
-    console.error(this.recursiveExport, exportOptions);
+    const exportOptions = Object.assign(
+      {
+        exportType: "markdown",
+        timeZone: "Europe/Zurich",
+        locale: "en",
+        collectionViewExportType: "currentView",
+      },
+      this.noFilesIncluded ? { includeContents: "no_files" } : {}
+    )
+    console.error(this.recursiveExport, exportOptions)
     const res = await this.client.post("enqueueTask", {
       task: {
         eventName: "exportBlock",
@@ -122,10 +130,7 @@ export class NotionExporter {
     const zip = await this.getZipUrl(idOrUrl).then(this.getZip)
     const entry = zip.getEntries().find(predicate)
     const payload: string | undefined = entry?.getData().toString().trim()
-    return (
-      payload ||
-      Promise.reject("Could not find file in ZIP.")
-    )
+    return payload || Promise.reject("Could not find file in ZIP.")
   }
 
   /**
@@ -153,6 +158,7 @@ export class NotionExporter {
 
   /**
    * Downloads ane extracts into a folder all files in the exported zip file.
+   *
    * @param idOrUrl BlockId or URL of the page/block/DB to export
    * @param folder The folder where the files are going to be unzipped
    */
