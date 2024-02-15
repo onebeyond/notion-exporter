@@ -12,7 +12,7 @@ pipeline. For example, you can use Notion as a CMS to write your blog, export
 the Markdown in a Github action and build a static Hugo page. 🎉
 
 ```bash
-npm install -g notion-exporter
+npm install -g @onebeyond/notion-exporter
 notion-exporter 3af0a1e347dd40c5ba0a2c91e234b2a5 -t csv > list.csv
 ```
 
@@ -26,7 +26,7 @@ your CSV, inject the Markdown in any React/Next.js/Vue page or interact with the
 underlying [`AdmZip`](https://github.com/cthackers/adm-zip) object.
 
 ```ts
-import NotionExporter from "notion-exporter"
+import NotionExporter from "@onebeyond/notion-exporter"
 
 const tokenV2 = ...
 const fileToken = ...
