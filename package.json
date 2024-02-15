@@ -1,6 +1,7 @@
 {
   "name": "@onebeyond/notion-exporter",
-  "author": "Yann Bolliger/One Beyond",
+  "author": "Yann Bolliger",
+  "contributors: ["One Beyond"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onebeyond/notion-exporter.git"
