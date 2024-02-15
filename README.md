@@ -1,5 +1,7 @@
 # Notion Exporter 🛫
 
+:warning: **This is a fork maintained by One Beyond.**. The fork started with the commit [`712b4a9`](https://github.com/yannbolliger/notion-exporter/commit/712b4a92882dcaef44e5625e258da4010a027155) from the original repository. The original repository is located at [yannbolliger/notion-exporter](https://github.com/yannbolliger/notion-exporter)
+
 A simple CLI tool and TypeScript library for exporting Markdown and CSV files
 from any [Notion.so](https://notion.so) page. The tool relies on the export
 feature of Notion's web-app, hence you get exactly the Markdown and CSV you'd
