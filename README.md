@@ -132,3 +132,4 @@ use-case? Please submit issues and PRs on Github.
 ### Contributors
 
 - Yann Bolliger, [@yannbolliger](https://github.com/yannbolliger).
+- Guillermo C. Martínez, [@telekosmos](https://github.com/telekosmos)
