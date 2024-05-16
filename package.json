@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/onebeyond/notion-exporter.git"
   },
-  "version": "0.6.1",
+  "version": "0.6.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
